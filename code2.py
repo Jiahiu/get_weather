@@ -21,7 +21,7 @@ def get_weather():
 if __name__ == "__main__":
     weather_info = get_weather()
     message = MIMEText(weather_info)
-    message["To"] = email.utils.formataddr(("接收者", "xxxx@qq.com"))
+    message["To"] = email.utils.formataddr(("接收者", "xxx@qq.com"))
     message["From"] = email.utils.formataddr(("发送者", "xxxx@qq.com"))
     message["Subject"] = "今日天气"
     server = smtplib.SMTP_SSL("smtp.qq.com", 465)
